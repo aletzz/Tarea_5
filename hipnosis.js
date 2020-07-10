@@ -1,19 +1,19 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(500, 500);
 }
 
 function draw() {
 background(255);
-for (y = 400; y > 0; y = y - 16){
+for (y = 500; y > 16; y = y - 16){
   if (y % 3 == 0){
-    fill(0, 255, 0);
+    fill(0, 0, 255);
   }
   if (y % 3 == 1){
-    fill(255, 0, 0);
+    fill(0, 255, 0);
   }
   if (y % 3 == 2){
-    fill(0, 0, 255);
+    fill(255, 0, 0);
     }
-      circle(200, 200, y);
+      circle(250, 250, y);
 } 
 }
