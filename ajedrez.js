@@ -3,26 +3,28 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  for (y = 0; y < 400; y = y + 50){
-    for (x = 0; x < 400; x = x + 50){
-  if (x % 100 == 0) {
-        if (y % 100 == 0) {
-          fill(255, 255, 255);
-        }
-        if (y % 100 == 50) {
-          fill(0, 0, 0);
-        }
+  var hilera = 0;
+  var x = color(0,0,0);
+  var y = color(255,255,255);
+  while(hilera < 8){
+    if(hilera%2 == 0){
+     x = color(0,0,0);
+      y = color(255,255,255);
+    }else{
+      x = color(255,255,255);
+      y = color(0,0,0);
+    }
+    var columna = 0;
+    while(columna < 8){
+      if(columna % 2 == 0){
+        fill(y);
+      }else{
+        fill(x);
       }
-      if (x % 100 == 50) {
-        if (y % 100 == 50) {
-          fill(255, 255, 255);
+      rect(columna*50, hilera*50, 50,50);
+      columna = columna+1;
         }
-        if (y % 100 == 0) {
-          fill(0, 0, 0);
+    hilera = hilera +1;
         }
-      }
-      rect(x, y, 50, 50);
-  }
-   }
+ 
 }
